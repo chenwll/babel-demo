@@ -1,0 +1,26 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": false,
+          "corejs": {
+            "version": 3
+          },
+          "targets": {
+            "ie": 11
+          }
+        }
+      ]
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime", 
+            {
+                "corejs": { "version": 3 },//不污染全局作用域
+                "helpers": true,
+                "regenerator": true //不污染全局作用域
+            }]
+        
+    ]
+}
